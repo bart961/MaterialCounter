@@ -18,7 +18,7 @@ try {
 
 var chatCheck = reader.read();
 
-var count, materials, index;
+var count, mats, index;
 var actions = 0;
 
 function readChatbox() {
@@ -37,16 +37,16 @@ function readChatbox() {
     for (var x in comps) {
         console.log(comps[x]);
         count = Number(comps[x].match(/\d+/)); //1
-        materials = comps[x].match(/[^You transport \d]\w+( \w+)?/)[0]; //Junk
-        if (materials.match(/parts|components|Junk/))
+        mats = comps[x].match(/[^You transport \d]\w+( \w+)?/)[0]; //Junk
+        if (mats.match(/parts|components|Junk/))
             console.log("is fine");
         else {
-            materials += "s";
+            mats += "s";
             console.log("Now " + materials);
         }
-        if (compsList[materials]) {
-            compsList[materials].qty += count; //add count to index of second list.
-            tidyTable(materials);
+        if (compsList[mats]) {
+            compsList[mats].qty += count; //add count to index of second list.
+            tidyTable(mats);
         } else {
             console.warn("Invalid component.  Ignoring.");
             continue;
