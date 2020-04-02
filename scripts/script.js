@@ -2,9 +2,9 @@ var reader = new ChatBoxReader();
 reader.readargs = {
     colors: [
         a1lib.mixcolor(255, 255, 255), //Common Mats
-        a1lib.mixcolor(255, 255, 255), //Uncommon Mats
-        a1lib.mixcolor(255, 255, 255), //Scavenging comps
-        a1lib.mixcolor(255, 255, 255) //Rare Mats
+        a1lib.mixcolor(255, 128, 0), //Uncommon Mats
+        a1lib.mixcolor(255, 165, 0), //Scavenging comps
+        a1lib.mixcolor(255, 0, 0) //Rare Mats
     ],
     backwards: true
 };
@@ -30,14 +30,14 @@ function readChatbox() {
         chat += opts[a].text + " ";
     }
 
-    var comps = chat.match(/\d+ x \w+( \w+)?[^\d+:]|You transport \d+ \w+( \w+)?[^\d+:]/g);
+    var comps = chat.match(/\d+ x \w+( \w+)?[^\d+:]|You receive \d+ \w+( \w+)?[^\d+:]/g);
     console.log(comps);
     if (comps != null && comps.length > -1)
         actions++;
     for (var x in comps) {
         console.log(comps[x]);
         count = Number(comps[x].match(/\d+/)); //1
-        mats = comps[x].match(/[^You transport \d]\w+( \w+)?/)[0]; //Junk
+        mats = comps[x].match(/[^You receive \d]\w+( \w+)?/)[0]; //Junk
         if (mats.match(/parts|components|Junk/))
             console.log("is fine");
         else {
