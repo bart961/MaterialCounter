@@ -36,7 +36,7 @@ function readChatbox() {
         actions++;
     for (var x in comps) {
         console.log(comps[x]);
-        count = Number(comps[x].match(/\d+/)); //1
+        count = 1; //1
         mats = comps[x].match(/[^You receive \d]\w+( \w+)?/)[0]; //Junk
         if (mats.match(/parts|components|Junk/))
             console.log("is fine");
