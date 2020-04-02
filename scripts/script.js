@@ -78,7 +78,7 @@ function tidyTable(flashRow) {
             $(`[data-name='${x}']`).show();
         }
     }
-    $(`[data-name='${materials}']`).css({ "background-color": "lime" }).animate({
+    $(`[data-name='${mats}']`).css({ "background-color": "lime" }).animate({
         backgroundColor: $.Color("rgba(0, 0, 0, 0)")
     }, 500, function() { $(this).removeAttr("style") });
 
@@ -117,7 +117,7 @@ $("button.tracker").click(function() {
 }).click();
 
 $("button.clear").click(function() {
-    localStorage.removeItem("materials");
+    localStorage.removeItem("mats");
     for (x in compsList) {
         compsList[x].qty = 0;
     }
