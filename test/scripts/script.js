@@ -1,10 +1,10 @@
 var reader = new ChatBoxReader();
 reader.readargs = {
     colors: [
-        a1lib.mixcolor(255, 255, 255), //Common materials
-        a1lib.mixcolor(255, 255, 255), //Uncommon materials
-        a1lib.mixcolor(255, 255, 255), //Scavenging comps
-        a1lib.mixcolor(255, 255, 255) //Rare materials
+        a1lib.mixcolor(255, 255, 255), //Common Mats
+        a1lib.mixcolor(255, 128, 0), //Uncommon Mats
+        a1lib.mixcolor(255, 165, 0), //Scavenging comps
+        a1lib.mixcolor(255, 0, 0) //Rare Mats
     ],
     backwards: true
 };
@@ -37,12 +37,12 @@ function readChatbox() {
     for (var x in comps) {
         console.log(comps[x]);
         count = Number(comps[x].match(/\d+/)); //1
-        mats = comps[x].match(/[^You transport \d]\w+( \w+)?/)[0]; //Junk
+        mats = comps[x].match(/[^You receive \d]\w+( \w+)?/)[0]; //Junk
         if (mats.match(/parts|components|Junk/))
             console.log("is fine");
         else {
             mats += "s";
-            console.log("Now " + materials);
+            console.log("Now " + mats);
         }
         if (compsList[mats]) {
             compsList[mats].qty += count; //add count to index of second list.
@@ -69,7 +69,7 @@ function buildTable() {
 }
 
 function tidyTable(flashRow) {
-    localStorage.materials = JSON.stringify(compsList);
+    localStorage.mats = JSON.stringify(compsList);
     for (x in compsList) {
         $(`[data-name='${x}'] > .qty`).text(compsList[x].qty);
         if (compsList[x].qty === 0) {
@@ -78,7 +78,7 @@ function tidyTable(flashRow) {
             $(`[data-name='${x}']`).show();
         }
     }
-    $(`[data-name='${materials}']`).css({ "background-color": "lime" }).animate({
+    $(`[data-name='${mats}']`).css({ "background-color": "lime" }).animate({
         backgroundColor: $.Color("rgba(0, 0, 0, 0)")
     }, 500, function() { $(this).removeAttr("style") });
 
@@ -117,7 +117,7 @@ $("button.tracker").click(function() {
 }).click();
 
 $("button.clear").click(function() {
-    localStorage.removeItem("materials");
+    localStorage.removeItem("mats");
     for (x in compsList) {
         compsList[x].qty = 0;
     }

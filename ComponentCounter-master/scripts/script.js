@@ -1,10 +1,10 @@
 var reader = new ChatBoxReader();
 reader.readargs = {
     colors: [
-        a1lib.mixcolor(255, 255, 255), //Common materials
-        a1lib.mixcolor(255, 255, 255), //Uncommon materials
+        a1lib.mixcolor(255, 255, 255), //Common Mats
+        a1lib.mixcolor(255, 255, 255), //Uncommon Mats
         a1lib.mixcolor(255, 255, 255), //Scavenging comps
-        a1lib.mixcolor(255, 255, 255) //Rare materials
+        a1lib.mixcolor(255, 255, 255) //Rare Mats
     ],
     backwards: true
 };
@@ -30,7 +30,7 @@ function readChatbox() {
         chat += opts[a].text + " ";
     }
 
-    var comps = chat.match(/\d+ x \w+( \w+)?[^\d+:]|You receive \d+ \w+( \w+)?[^\d+:]/g);
+    var comps = chat.match(/\d+ x \w+( \w+)?[^\d+:]|You transport \d+ \w+( \w+)?[^\d+:]/g);
     console.log(comps);
     if (comps != null && comps.length > -1)
         actions++;
@@ -42,7 +42,7 @@ function readChatbox() {
             console.log("is fine");
         else {
             mats += "s";
-            console.log("Now " + materials);
+            console.log("Now " + mats);
         }
         if (compsList[mats]) {
             compsList[mats].qty += count; //add count to index of second list.
@@ -69,7 +69,7 @@ function buildTable() {
 }
 
 function tidyTable(flashRow) {
-    localStorage.materials = JSON.stringify(compsList);
+    localStorage.mats = JSON.stringify(compsList);
     for (x in compsList) {
         $(`[data-name='${x}'] > .qty`).text(compsList[x].qty);
         if (compsList[x].qty === 0) {
