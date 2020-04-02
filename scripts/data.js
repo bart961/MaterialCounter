@@ -1,312 +1,147 @@
 var compsList = {
-    "Ancient components": {
+    "Third Age iron": {
         type: "rare",
         qty: 0
     },
-    "Armadyl components": {
+    "Zarosian insignia": {
         type: "rare",
         qty: 0
     },
-    "Ascended components": {
+    "Samite silk": {
         type: "rare",
         qty: 0
     },
-    "Avernic components": {
+    "Imperial steel": {
         type: "rare",
         qty: 0
     },
-    "Bandos components": {
+    "White oak": {
         type: "rare",
         qty: 0
     },
-    "Brassican components": {
+    "Goldrune": {
         type: "rare",
         qty: 0
     },
-    "Clockwork components": {
+    "Orthenglass": {
         type: "rare",
         qty: 0
     },
-    "Corporeal components": {
+    "Vellum": {
         type: "rare",
         qty: 0
     },
-    "Culinary components": {
+    "Cadmium red": {
         type: "rare",
         qty: 0
     },
-    "Cywir components": {
+    "Ancient vis": {
         type: "rare",
         qty: 0
     },
-    "Dragonfire components": {
+    "Tyrian purple": {
         type: "rare",
         qty: 0
     },
-    "Explosive components": {
+    "Leather scraps": {
         type: "rare",
         qty: 0
     },
-    "Faceted components": {
+    "Chaotic brimstone": {
         type: "rare",
         qty: 0
     },
-    "Fortunate components": {
+    "Demonhide": {
         type: "rare",
         qty: 0
     },
-    "Fungal components": {
+    "Eye of Dagon": {
         type: "rare",
         qty: 0
     },
-    "Harnessed components": {
+    "Hellfire metal": {
         type: "rare",
         qty: 0
     },
-    "Ilujankan components": {
+    "Keramos": {
         type: "rare",
         qty: 0
     },
-    "Knightly components": {
+    "White marble": {
         type: "rare",
         qty: 0
     },
-    "Noxious components": {
+    "Cobalt blue": {
         type: "rare",
         qty: 0
     },
-    "Oceanic components": {
+    "Everlight silvthril": {
         type: "rare",
         qty: 0
     },
-    "Pestiferous components": {
+    "Star of Saradomin": {
         type: "rare",
         qty: 0
     },
-    "Resilient components": {
+    "Blood of Orcus": {
         type: "rare",
         qty: 0
     },
-    "Rumbling components": {
+    "Stormguard steel": {
         type: "rare",
         qty: 0
     },
-    "Saradomin components": {
+    "Wings of War": {
         type: "rare",
         qty: 0
     },
-    "Seren components": {
+    "Animal furs": {
         type: "rare",
         qty: 0
     },
-    "Shadow components": {
+    "Armadylean yellow": {
         type: "rare",
         qty: 0
     },
-    "Shifting components": {
+    "Malachite green": {
         type: "rare",
         qty: 0
     },
-    "Silent components": {
+    "Mark of the Kyzaj": {
         type: "rare",
         qty: 0
     },
-    "Undead components": {
+    "Vulcanised rubber": {
         type: "rare",
         qty: 0
     },
-    "Zamorak components": {
+    "Warforged bronze": {
         type: "rare",
         qty: 0
     },
-    "Zaros components": {
+    "Fossilised bone": {
         type: "rare",
         qty: 0
     },
-    "Dextrous components": {
-        type: "uncommon",
+    "Yu'biusk clay": {
+        type: "rare",
         qty: 0
     },
-    "Direct components": {
-        type: "uncommon",
+    "Aetherium alloy": {
+        type: "rare",
         qty: 0
     },
-    "Enhancing components": {
-        type: "uncommon",
+    "Quintessence": {
+        type: "rare",
         qty: 0
     },
-    "Ethereal components": {
-        type: "uncommon",
+    "Soapstone": {
+        type: "rare",
         qty: 0
     },
-    "Evasive components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Healthy components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Heavy components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Imbued components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Light components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Living components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Pious components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Powerful components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Precious components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Precise components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Protective components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Refined components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Sharp components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Strong components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Stunning components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Subtle components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Swift components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Variable components": {
-        type: "uncommon",
-        qty: 0
-    },
-    "Base parts": {
-        type: "common",
-        qty: 0
-    },
-    "Blade parts": {
-        type: "common",
-        qty: 0
-    },
-    "Clear parts": {
-        type: "common",
-        qty: 0
-    },
-    "Connector parts": {
-        type: "common",
-        qty: 0
-    },
-    "Cover parts": {
-        type: "common",
-        qty: 0
-    },
-    "Crafted parts": {
-        type: "common",
-        qty: 0
-    },
-    "Crystal parts": {
-        type: "common",
-        qty: 0
-    },
-    "Deflecting parts": {
-        type: "common",
-        qty: 0
-    },
-    "Delicate parts": {
-        type: "common",
-        qty: 0
-    },
-    "Flexible parts": {
-        type: "common",
-        qty: 0
-    },
-    "Head parts": {
-        type: "common",
-        qty: 0
-    },
-    "Magic parts": {
-        type: "common",
-        qty: 0
-    },
-    "Metallic parts": {
-        type: "common",
-        qty: 0
-    },
-    "Organic parts": {
-        type: "common",
-        qty: 0
-    },
-    "Padded parts": {
-        type: "common",
-        qty: 0
-    },
-    "Plated parts": {
-        type: "common",
-        qty: 0
-    },
-    "Simple parts": {
-        type: "common",
-        qty: 0
-    },
-    "Smooth parts": {
-        type: "common",
-        qty: 0
-    },
-    "Spiked parts": {
-        type: "common",
-        qty: 0
-    },
-    "Spiritual parts": {
-        type: "common",
-        qty: 0
-    },
-    "Stave parts": {
-        type: "common",
-        qty: 0
-    },
-    "Tensile parts": {
-        type: "common",
-        qty: 0
-    },
-    "Junk": {
-        type: "common",
-        qty: 0
-    }
-}
-
-if (localStorage.getItem("mats") != null) {
-    tempList = JSON.parse(localStorage.mats);
+  
+if (localStorage.getItem("materials") != null) {
+    tempList = JSON.parse(localStorage.materials);
     for (x in tempList) {
         if (!tempList[x] || !compsList[x]) {
             continue;
